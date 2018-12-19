@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+     }
+a {
+  color: skyblue;
+  text-decoration: none;
+  }
+h1 {
+  margin: 0; padding: 20px;
+  border-bottom: 1px solid gray;
+  text-align: left;font-size: 50px; font-style:normal;
+  }
+#grid ul {
+     padding: 10px; margin: 0px; padding-left: 30px;
+     width: 130px; font-size: 20px; margin: 0;
+   }
+#grid h3 { margin: 0;}
+
+#grid{
+ display: grid;
+ grid-template-columns: 150px 1fr;
+}
+#contents{
+ padding-left: 60px; border-left:1px solid gray;
+}
+#contents p {font-size: 30px}
+}
