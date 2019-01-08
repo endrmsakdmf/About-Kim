@@ -16,9 +16,16 @@
     <title>About Kim</title>
 
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
+  <meta name="keywords" content="자기소개,홈페이지,css,html,javascript,프로그래밍,생활코딩,kim,about,AboutKim,aboutkim,aboutKim">
   </head>
   <body>
     <h1><a href="index.html">김장현</a></h1>
+
+    <input  type="button" value="If you would prefer dark, press this button" onclick="
+          nightDayHandler(this);
+          ">
   <div id="grid">
     <h3>
       <ul>
@@ -35,24 +42,40 @@
       </div>
     </div>
 
-<input id="night_day"  type="button" value="If you would prefer dark, press this button" onclick="
-      if(document.querySelector('#night_day').value === 'If you would prefer dark, press this button') {
-         document.querySelector('body').style.backgroundColor = 'black';
-         document.querySelector('body').style.color = 'white';
-         document.querySelector('#night_day').value = 'If you would prefer bright, press this button';
-        } else {
-         document.querySelector('body').style.backgroundColor = 'white';
-         document.querySelector('body').style.color = 'black';
-         document.querySelector('#night_day').value = 'If you would prefer dark, press this button';
-        }
-        ">
+    <input  type="button" value="If you would prefer dark, press this button" onclick="
+          var target = document.querySelector('body')
+          if(this.value === 'If you would prefer dark, press this button') {
+             target.style.backgroundColor = 'black';
+             target.style.color = 'white';
+             this.value = 'If you would prefer bright, press this button';
+
+             var alist = document.querySelectorAll('a');
+             var i = 0;
+             while(i < alist.length){
+             alist[i].style.color = 'powderblue';
+             i = i + 1;
+              }
+            } else {
+             target.style.backgroundColor = 'white';
+             target.style.color = 'black';
+             this.value = 'If you would prefer dark, press this button';
+
+             var alist = document.querySelectorAll('a');
+             var i = 0;
+             while(i < alist.length){
+             alist[i].style.color = 'skyblue';
+             i = i + 1;
+              }
+            }
+            ">
+
 
 <input id="facebook" backgroundColor="#3b5998" type="button" value="facebook" onclick="
         window.open('https://www.facebook.com/jang.kim.752')
         ">
 <button style = "color:red;background-color:blue"> <a href="https://www.facebook.com/jang.kim.752" target="_blank">
         Kim's facebook</a> </button>
-
+<input type="submit" name="button" value="네이버로 로그인" onclick="https://nid.naver.com/oauth2.0/authorize"></button>
 
 
   <div id="disqus_thread"></div>
